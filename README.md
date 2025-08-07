@@ -6,7 +6,7 @@
 2. train.py 用于训练模型，运行即可进行训练，训练结果将保存在 train.py 的运行目录下。
 3. data文件夹用于存放正面、负面训练数据，neg.txt 与 pos.txt。
 4. mode 文件夹用于存放模型文件，提供给 continue.py 继续增量训练模型训练使用。
-
+5. Automatic training.py 加载snownlp模块下的模型对 data.txt（内容可以是格式不一的各种文本段落，他们将被分解为每一句话） 进行预测标注，并保存结果至res.txt中。
 
 ### 调整详细（中文）
 1. 优化了训练调用的输出信息：显示传入的正面、负面数据量，并对错误数据剔除，显示当前训练已用时间、训练时间花费的估计与当前训练的速度.
@@ -26,6 +26,7 @@
 2. train.py is used to train the model, and the training results will be saved in the train.py run directory.
 3. The data folder is used to store positive and negative training data, neg.txt and pos.txt.
 4. The mode folder is used to store the model files and is provided for continue.py to continue training the incremental training model.
+5. Automatic training.py loads the model under the snownlp module to predict and annotate the data.txt (the content can be various text paragraphs in different formats, they will be broken down into sentences) and save the results to the res.txt.
 
 ### Adjustment Details (English)
 1. Optimized the output information of training calls: display the amount of incoming positive and negative data, and exclude erroneous data, showing the current training time, the estimated training time spent and the current training speed.
