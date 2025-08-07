@@ -3,6 +3,8 @@
 
 ### 作者邮箱：3436533165@qq.com
 
+![alt text](image.png)
+
 ### 使用方法与文件介绍
 1. 目录下方的 snowNLP 是修改后的 snowNLP 模块。
 2. train.py 用于训练模型，运行即可进行训练，训练结果将保存在 train.py 的运行目录下。
