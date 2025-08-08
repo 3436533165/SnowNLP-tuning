@@ -1,9 +1,9 @@
 # SnowNLP-tuning
 基于py语言的朴素贝叶斯分类器snowNLP算法调整
 
-### 作者邮箱：a3436533165@163.com
+### 作者邮箱：3436533165@qq.com
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ### 使用方法与文件介绍
 1. 目录下方的 snowNLP 是修改后的 snowNLP 模块。
