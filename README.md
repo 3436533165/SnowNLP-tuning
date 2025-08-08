@@ -6,11 +6,18 @@
 ![alt text](image-1.png)
 
 ### 使用方法与文件介绍
+【文件夹】根目录
 1. 目录下方的 snowNLP 是修改后的 snowNLP 模块。
 2. train.py 用于训练模型，运行即可进行训练，训练结果将保存在 train.py 的运行目录下。
 3. data文件夹用于存放正面、负面训练数据，neg.txt 与 pos.txt。
 4. mode 文件夹用于存放模型文件，提供给 continue.py 继续增量训练模型训练使用。
-5. Automatic training.py 加载snownlp模块下的模型对 data.txt（内容可以是格式不一的各种文本段落，他们将被分解为每一句话） 进行预测标注，并保存结果至res.txt中。
+
+【文件夹】训练集生成
+1. 段落文本批量预测工具.py 用于给data.txt文件中的内容分成每一句，然后调用sonwnlp进行初步标注，并将结果放置在  预测标注生成的数据.txt  文件中
+
+【文件夹】模型测试
+1. bert-snownlp-Mixed（组合预测）.py  对 bert 与 snowNLP 算法进行调整，进行一定的语义理解与修饰分析，降低了句子误判问题。
+![alt text](image-2.png)
 
 ### 调整详细（中文）
 version 1.0
@@ -21,6 +28,7 @@ version 1.0
 
 version: 2.0
 1. 优化：调整了线程的使用解决了抢占问题导致的训练速度逐渐下降的问题，速度突破12000条数据每秒，相较原版的snowNLP模块有了20倍提升。
+2. 使用transform架构调用bert和snownlp混合预测，使用算法找出核心修饰词与描述关联关系。（BERT 语义分析模型下载： https://huggingface.co/google-bert/bert-base-chinese）
 ![alt text](image.png)
 
 ### 贝叶斯方法
